@@ -14,6 +14,7 @@ import Favorite from './icons/Favorite';
 import Camera from './icons/Camera';
 import User from './icons/User';
 import Search from './icons/Search';
+import Header from './components/Header';
 
 const image = {
   uri: 'https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg',
@@ -21,18 +22,10 @@ const image = {
 
 function HomeScreen() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView vertical stickyHeaderIndices={[0]}>
+      <Header />
       <Image source={image} resizeMode="cover" style={styles.image} />
       <View style={{backgroundColor: '#242424', height: 300}}>
-        <View
-          style={{
-            marginHorizontal: 20,
-            marginVertical: 20,
-            height: 100,
-            backgroundColor: 'white',
-          }}>
-          <Text style={styles.title}>Liteflix</Text>
-        </View>
       </View>
     </ScrollView>
   );

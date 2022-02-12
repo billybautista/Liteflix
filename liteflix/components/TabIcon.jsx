@@ -3,8 +3,10 @@ import React from 'react';
 
 export default function TabIcon() {
   return (
-    <View>
-      <Text>TabIcon</Text>
+
+    
+    <View style={styles.container}>  
+         <Text style={styles.text}>TabIcon</Text>
     </View>
   );
 }
